@@ -10,6 +10,7 @@ def hello_pybo():
 
 @bp.route('/')
 def index():
+    3/0 #강제 오류
     return redirect(url_for('question._list'))
     #url_for 안에 question._list 는 .앞의 question은 블루프린터이고
     #_list는 블루프린터 내에 함수를 말한다.
