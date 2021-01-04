@@ -5,20 +5,20 @@ SQLALCHEMY_DATABASE_URI = 'sqlite:///{}'.format(os.path.join(BASE_DIR, 'pybo.db'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
 SECRET_KEY = b'\xe5\xb9\xecx-?EJ.\xe3\xa3\xf4\x12\x7f=\xac'
 
-'''
+
 dictConfig({
     'version': 1,
     'formatters': {
-        'defalut' : {
+        'default': {
             'format': '[%(asctime)s] %(levelname)s in %(module)s: %(message)s',
         }
     },
-    'handlers' : {
-        'file' : {
+    'handlers': {
+        'file': {
             'level': 'INFO',
             'class': 'logging.handlers.RotatingFileHandler',
             'filename': os.path.join(BASE_DIR, 'logs/myproject.log'),
-            'maxBytes': 1024 * 1024 * 5, # 5 MB
+            'maxBytes': 1024 * 1024 * 5,  # 5 MB
             'backupCount': 5,
             'formatter': 'default',
         },
@@ -28,4 +28,3 @@ dictConfig({
         'handlers': ['file']
     }
 })
-'''
