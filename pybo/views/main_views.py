@@ -9,7 +9,7 @@ def hello_pybo():
 
 
 @bp.route('/')
-def index(request):
+def index():
     return redirect(url_for('question._list'))
     current_app.logger.info("INFO 레벨로 출력")
     #url_for 안에 question._list 는 .앞의 question은 블루프린터이고
